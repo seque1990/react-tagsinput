@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import AutosizeInput from 'react-input-autosize'
 
 function uniq (arr) {
   let out = []
@@ -49,7 +50,7 @@ defaultRenderTag.propTypes = {
 function defaultRenderInput ({addTag, ...props}) {
   let {onChange, value, ...other} = props
   return (
-    <input type='text' onChange={onChange} value={value} {...other} />
+    <AutosizeInput autoFocus type='text' onChange={onChange} value={value} {...other} />
   )
 }
 
